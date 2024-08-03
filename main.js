@@ -35,7 +35,7 @@ form.onsubmit = async (ev) => {
         role: "user",
         parts: [
           //{ inline_data: { mime_type: 'image/jpeg', data: imageBase64, } },
-          { text:`${promptInput.value} dalam bahasa gaul, lucu dan berikan roasting singkat, kejam dan menyindir di akhir kalimat tanpa menyertakan kata kunci`, },
+          { text:`${promptInput.value} dalam bahasa gaul, lucu dan berikan roasting yang kejam dan menyindir di akhir kalimat`, },
         ],
       },
     ];
@@ -49,14 +49,14 @@ form.onsubmit = async (ev) => {
           category: HarmCategory.HARM_CATEGORY_HARASSMENT,
           threshold: HarmBlockThreshold.BLOCK_NONE,
         },
-        //{
-          //category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-          //threshold: HarmBlockThreshold.BLOCK_NONE,
-        //},
-        //{
-          //category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-          //threshold: HarmBlockThreshold.BLOCK_NONE,
-        //},
+        {
+          category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+          threshold: HarmBlockThreshold.BLOCK_NONE,
+        },
+        {
+          category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+          threshold: HarmBlockThreshold.BLOCK_NONE,
+        },
       ],
     });
 
