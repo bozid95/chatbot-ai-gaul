@@ -35,7 +35,7 @@ form.onsubmit = async (ev) => {
         role: "user",
         parts: [
           //{ inline_data: { mime_type: 'image/jpeg', data: imageBase64, } },
-          { text:`${promptInput.value} , gunakan bahasa gaul, lucu dan berikan roasting singkat, lucu, menyindir di akhir kalimat tanpa menyertakan kata kunci`, },
+          { text:`${promptInput.value} , gunakan bahasa gaul, lucu dan berikan roasting singkat, kejam dan menyindir tanpa pujian di akhir kalimat tanpa menyertakan kata kunci`, },
         ],
       },
     ];
@@ -47,7 +47,11 @@ form.onsubmit = async (ev) => {
       safetySettings: [
         {
           category: HarmCategory.HARM_CATEGORY_HARASSMENT,
-          threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+          threshold: HarmBlockThreshold.BLOCK_NONE,
+        },
+        {
+          category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+          threshold: HarmBlockThreshold.BLOCK_NONE,
         },
       ],
     });
