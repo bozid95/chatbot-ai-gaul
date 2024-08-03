@@ -73,6 +73,7 @@ input {
   height: 100px;
   background-color: var(--card-background);
   color: var(--text-color);
+  margin-top: 15px;
   text-align: center; /* Teks akan berada di tengah */
 }
 
@@ -124,7 +125,7 @@ button:hover {
 
   input {
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 15px;
   }
 
   button {
