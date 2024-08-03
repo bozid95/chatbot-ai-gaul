@@ -99,6 +99,7 @@ button:hover {
 
 .center {
   text-align: center;
+  gap: 8px;
 }
 
 .footer {
