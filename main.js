@@ -35,7 +35,7 @@ form.onsubmit = async (ev) => {
         role: "user",
         parts: [
           //{ inline_data: { mime_type: 'image/jpeg', data: imageBase64, } },
-          { text:`${promptInput.value} , gunakan bahasa gaul, lucu dan berikan roasting singkat, kejam, menyindir serta menyakitkan di akhir kalimat tanpa menyertakan kata kunci, pornografi dan sara`, },
+          { text:`${promptInput.value} , gunakan bahasa gaul, lucu dan berikan roasting singkat, lucu, menyindir di akhir kalimat tanpa menyertakan kata kunci`, },
         ],
       },
     ];
