@@ -1,10 +1,16 @@
+/* Improved CSS with Tailwind-like styling and dark mode */
 body {
   margin: 24px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   --accent-color: #076eff;
-  color: #202124;
+  --background-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --card-background: #2a2a2a;
+  --button-hover: #0456b7;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 main,
@@ -14,16 +20,20 @@ main,
   max-width: 460px;
   margin: 0 auto;
   border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-background);
 }
 
 .api-key-banner {
   background-color: #ffddb7;
   font-weight: bold;
   margin-bottom: 16px;
+  padding: 12px;
 }
 
 .api-key-banner a {
   color: var(--accent-color);
+  text-decoration: none;
 }
 
 * {
@@ -31,11 +41,11 @@ main,
 }
 
 main {
-  background-color: #fff;
+  padding: 16px;
 }
 
 h1 {
-  display: inline-block;
+  display: flex;
   align-items: center;
   gap: 8px;
   margin: 0 auto;
@@ -55,100 +65,39 @@ form {
   margin: 0;
 }
 
-.image-picker {
-  display: flex;
-  width: 100%;
-  gap: 8px;
-  margin-top: 24px;
-}
-
-.image-choice {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.image-choice:has(:checked)::before {
-  pointer-events: none;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  z-index: 1;
-  color: white;
-  content: "✓";
-  background-color: var(--accent-color);
-  width: 16px;
-  height: 16px;
-  display: grid;
-  place-items: center;
-  font-weight: bold;
-  border-radius: 100px;
-  box-shadow: 0 0 0 2px #fff;
-}
-
-.image-choice:has(:checked)::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  inset: 0;
-  border-radius: 8px;
-  box-shadow: 0 0 0 2px var(--accent-color) inset, 0 0 0 4px #fff inset;
-}
-
-.image-choice img {
-  width: 100%;
-}
-
-.image-choice input {
-  opacity: 0;
-  position: absolute;
-}
-
-.image-choice:focus-within::after {
-  box-shadow: 0 0 0 4px var(--accent-color) inset;
-}
-
 .prompt-box {
-  margin: 5px 0;
+  margin: 16px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   align-items: center;
 }
 
 label {
-  display: block;
-  flex: 1;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 input {
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 5px;
-  margin: 5px;
-  font-family: unset;
+  padding: 10px;
   font-size: 16px;
-  height: 100px;
-  width: 320px;
+  width: 100%;
+  background-color: var(--card-background);
+  color: var(--text-color);
 }
 
 button {
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 8px;
   padding: 12px 16px;
-  font-family: unset;
   font-size: 16px;
-  border-color: var(--accent-color);
   background-color: var(--accent-color);
   color: white;
   font-weight: bold;
   cursor: pointer;
-  opacity: 1;
+  transition: background-color 0.2s ease;
 }
 
 button:focus-visible {
@@ -157,14 +106,15 @@ button:focus-visible {
 }
 
 button:hover {
-  opacity: 0.95;
+  background-color: var(--button-hover);
 }
+
 .center {
   text-align: center;
 }
 
 .footer {
-  text-align: center;
   font-size: 12px;
   margin-top: 24px;
+  text-align: center;
 }
