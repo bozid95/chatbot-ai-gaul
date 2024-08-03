@@ -162,3 +162,9 @@ button:hover {
 .center {
   text-align: center;
 }
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 24px;
+}
