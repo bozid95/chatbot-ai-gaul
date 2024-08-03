@@ -12,7 +12,7 @@ import "./style.css";
 // Get your Gemini API key by:
 // - Selecting "Add Gemini API" in the "Project IDX" panel in the sidebar
 // - Or by visiting https://g.co/ai/idxGetGeminiKey
-let API_KEY = "AIzaSyAOCSVIZ7BbA4LqF0UEDP8vhavNHRIWCxg";
+let API_KEY = "AIzaSyCr472dCTv2aC1lFc2HKlBgvDHFg1B8VYo";
 
 let form = document.querySelector("form");
 let promptInput = document.querySelector('input[name="prompt"]');
